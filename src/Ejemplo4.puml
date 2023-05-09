@@ -1,0 +1,12 @@
+@startuml
+actor :Ciudadano:
+actor :Ciudadano extranjero:
+usecase (Registrar entrada)
+usecase (Tomar huellas)
+
+:Ciudadano: -- (Registrar entrada)
+:Ciudadano extranjero: -- (Tomar huellas)
+
+(Tomar huellas) ..> (Registrar entrada) : <<extend>>
+:Ciudadano extranjero: --|> :Ciudadano:
+@enduml
