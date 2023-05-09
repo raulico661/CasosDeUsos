@@ -1,0 +1,20 @@
+@startuml
+actor :new Actor:
+usecase (Identificarse)
+usecase (Registrarse)
+usecase (Pagar)
+usecase (Pagar con tarjeta)
+usecase (Pagar con transferencia)
+usecase (Elegir mensajero)
+usecase (Confirmar)
+
+:new Actor: -- (Identificarse)
+:new Actor: -- (Pagar)
+:new Actor: -- (Elegir mensajero)
+:new Actor: -- (Confirmar)
+
+(Registrarse) ..> (Identificarse) : <<extend>>
+
+(Pagar con tarjeta) --|> (Pagar)
+(Pagar con transferencia) --|> (Pagar)
+@enduml
