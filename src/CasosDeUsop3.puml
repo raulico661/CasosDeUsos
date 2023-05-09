@@ -1,0 +1,17 @@
+@startuml
+usecase (Pagar)
+usecase (Pagar con tarjeta)
+usecase (Pagar en efectivo)
+
+(Pagar) --|> (Pagar con tarjeta)
+(Pagar) --|> (Pagar en efectivo)
+
+actor :Cliente:
+actor :Cliente VIP:
+usecase (Reservar vuelo)
+usecase (Elegir asientos)
+
+:Cliente: -- (Reservar vuelo)
+:Cliente VIP: -- (Elegir asientos)
+:Cliente VIP: --|> :Cliente:
+@enduml
