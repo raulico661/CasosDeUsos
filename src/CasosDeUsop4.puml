@@ -1,0 +1,20 @@
+@startuml
+usecase Caso1 as "Sacar dinero
+--
++ solicitud hecha"
+
+usecase Caso2 as "Retener tarjeta"
+
+skinparam usecase {
+   BackgroundColor lightGreen
+   BorderColor green
+   ArrowColor lightGreen
+}
+
+(Caso2) ..> (Caso1) : <<extend>>
+
+note "Description\n--\ncondición:\n\t{historia sospechosa}\npunto de extensión:\n\tsolicitud hecha" as N2
+(Caso1) .. N2
+N2 .. (Caso2)
+@enduml
+
