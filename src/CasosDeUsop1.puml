@@ -1,0 +1,16 @@
+@startuml
+actor :Cliente: as Cli
+actor :Restaurante: as Rest
+
+rectangle App {
+    usecase (Mostrar menú) as Menu
+    usecase (Pedir comida) as Comida
+}
+
+usecase (Entregar comida) as Entrega
+
+Cli -- Menu
+Cli -- Comida
+Rest -- Menu
+Rest -- Entrega
+@enduml

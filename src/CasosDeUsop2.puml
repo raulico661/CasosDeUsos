@@ -1,0 +1,13 @@
+@startuml
+
+actor :Cliente:
+usecase (Confirmar pedido)
+usecase (Cancelar pedido)
+usecase (Devolver cambio)
+Cliente -- (Confirmar pedido)
+Cliente -- (Cancelar pedido)
+
+(Confirmar pedido) ..> (Devolver cambio) : <<include>>
+(Cancelar pedido) ..> (Devolver cambio) : <<include>>
+
+@enduml

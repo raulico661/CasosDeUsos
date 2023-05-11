@@ -1,0 +1,19 @@
+@startuml
+actor :Usuario:
+actor :Administrador:
+usecase (Iniciar sesión)
+usecase (Recuperar contraseña)
+usecase (Modificar contraseña)
+usecase (Cerrar sesión)
+usecase (Registrar usuario)
+usecase (Instalar programa)
+
+:Usuario: -- (Iniciar sesión)
+:Usuario: -- (Recuperar contraseña)
+:Usuario: -- (Modificar contraseña)
+:Usuario: -- (Cerrar sesión)
+:Administrador: -- (Registrar usuario)
+:Administrador: -- (Instalar programa)
+
+:Administrador: --|> :Usuario:
+@enduml
